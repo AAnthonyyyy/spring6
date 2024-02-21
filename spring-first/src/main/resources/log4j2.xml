@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <loggers>
+        <root level="DEBUG">
+            <appender-ref ref="spring6log"/>
+            <appender-ref ref="RollingFile"/>
+            <appender-ref ref="log"/>
+        </root>
+    </loggers>
+</configuration>
