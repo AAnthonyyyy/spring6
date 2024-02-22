@@ -9,7 +9,7 @@ public class TestStu {
     @Test
     public void testStu() {
         ApplicationContext context = new ClassPathXmlApplicationContext("bean-di-ref.xml");
-        Student student = context.getBean("student", Student.class);
+        Student student = context.getBean("studentp", Student.class);
         student.info();
     }
 }

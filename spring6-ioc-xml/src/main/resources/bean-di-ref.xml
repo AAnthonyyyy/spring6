@@ -2,12 +2,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/util
-    http://www.springframework.org/schema/util/spring-util.xsd
-    http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-
+       http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
     <bean id="lesson_one" class="com.hgm.springiocxml.dimap.Lesson">
@@ -27,10 +26,6 @@
         <property name="teacherId" value="002"></property>
         <property name="teacherName" value="黑马"></property>
     </bean>
-
-
-
-
 
 
     <bean id="student" class="com.hgm.springiocxml.dimap.Student">
@@ -61,4 +56,9 @@
         </entry>
     </util:map>
 
+
+    <!--  p命名空间注入  -->
+    <bean id="studentp" class="com.hgm.springiocxml.dimap.Student"
+          p:sid="100" p:sname="Jim" p:lessonList-ref="lessonList" p:teacherMap-ref="teacherMap">
+    </bean>
 </beans>
