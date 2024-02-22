@@ -1,5 +1,8 @@
 package com.hgm.springiocxml.ditest;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 /**
  * 员工类
  */
@@ -9,9 +12,21 @@ public class Emp {
 
     private Dept dept;// 员工属于某个部门
 
+    private String[] loves;
+
     public void work() {
-        System.out.println(ename+ " emp working..." + age);
+        System.out.println(ename + " emp working..." + age);
         dept.info();
+        System.out.println(Arrays.toString(loves));
+    }
+
+
+    public String[] getLoves() {
+        return loves;
+    }
+
+    public void setLoves(String[] loves) {
+        this.loves = loves;
     }
 
     public Integer getAge() {

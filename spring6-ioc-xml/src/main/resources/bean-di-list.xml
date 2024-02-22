@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 注入列表类型属性 -->
+    <bean id="emp_one" class="com.hgm.springiocxml.ditest.Emp">
+        <property name="ename" value="Tom"></property>
+        <property name="age" value="20"></property>
+    </bean>
+
+    <bean id="emp_two" class="com.hgm.springiocxml.ditest.Emp">
+        <property name="ename" value="Marry"></property>
+        <property name="age" value="30"></property>
+    </bean>
+
+    <bean id="dept" class="com.hgm.springiocxml.ditest.Dept">
+        <property name="dname" value="技术部"></property>
+        <!-- 注入对象到列表类型的属性中 -->
+        <property name="empList">
+            <list>
+                <ref bean="emp_one"></ref>
+                <ref bean="emp_two"></ref>
+            </list>
+        </property>
+    </bean>
+
+
+
+</beans>

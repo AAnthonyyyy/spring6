@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 注入Map类型对象属性 -->
+    <bean id="teacher_one" class="com.hgm.springiocxml.dimap.Teacher">
+        <property name="teacherId" value="t01"></property>
+        <property name="teacherName" value="001讲师"></property>
+    </bean>
+    <bean id="teacher_two" class="com.hgm.springiocxml.dimap.Teacher">
+        <property name="teacherId" value="t02"></property>
+        <property name="teacherName" value="002讲师"></property>
+    </bean>
+
+    <bean id="student" class="com.hgm.springiocxml.dimap.Student">
+        <property name="sid" value="s01"></property>
+        <property name="sname" value="张三"></property>
+
+        <property name="teacherMap">
+            <map>
+                <entry>
+                    <key>
+                        <value>10001</value>
+                    </key>
+                    <ref bean="teacher_one"></ref>
+                </entry>
+                <entry>
+                    <key>
+                        <value>10002</value>
+                    </key>
+                    <ref bean="teacher_two"></ref>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+</beans>
