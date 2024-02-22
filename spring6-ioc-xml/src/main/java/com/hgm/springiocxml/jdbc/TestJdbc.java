@@ -20,7 +20,7 @@ public class TestJdbc {
     @Test
     public void demo2() {
         // 使用Spring方法注入（自动）
-        ApplicationContext context=new ClassPathXmlApplicationContext("bean-jdbc.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean-jdbc.xml");
         DruidDataSource dataSource = context.getBean(DruidDataSource.class);
         System.out.println(dataSource.getUrl());
     }
