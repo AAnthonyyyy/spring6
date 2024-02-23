@@ -5,7 +5,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- 使用Spring创建我们的对象，在Spring这些称为Bean -->
-    <bean id="user" class="com.hgm.spring6.User">
+    <bean id="user" class="com.hgm.spring6.bean.User">
     </bean>
 
 </beans>
