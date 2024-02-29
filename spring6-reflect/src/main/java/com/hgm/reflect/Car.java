@@ -2,11 +2,28 @@ package com.hgm.reflect;
 
 public class Car {
 
+    // 属性
     private String name;
     private int age;
     private String color;
 
 
+    // 构造器
+    public Car() {
+    }
+    public Car(String name, int age, String color) {
+        this.name = name;
+        this.age = age;
+        this.color = color;
+    }
+
+    // 普通方法
+    private void run(){
+        System.out.println("私有方法-run...");
+    }
+
+
+    // get、set方法
     public String getName() {
         return name;
     }
